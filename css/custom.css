@@ -1,0 +1,124 @@
+/* 一级菜单居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: -80px;
+}
+
+/* 目录 */
+.toc {
+  width: max-content;
+  font-size: 10px;
+}
+
+/* 夜间模式菜单栏发光字 */
+[data-theme="dark"] #nav .site-page,
+[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
+  text-shadow: 0 0 2px rgb(110, 188, 188) !important;
+}
+
+/* 手机端适配 */
+[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
+  text-shadow: 0 0 2px rgb(110, 188, 188) !important;
+}
+[data-theme="dark"] #recent-posts > .recent-post-item {
+  border: rgb(110, 188, 188, 0.5) solid 3px;
+  padding: 36px;
+}
+[data-theme="dark"] #recent-posts > .recent-post-item >.recent-post-info > .article-title {
+  font-size: 1.6em;
+  text-shadow: 0 0 2px rgb(110, 188, 188) !important;
+}
+
+@font-face {
+  font-family: 'LXGWWenKaiGBScreenR';
+  font-display: swap;
+  src: url('/font/LXGWWenKaiGBScreenR.ttf') format('truetype');
+}
+
+/* 侧边栏个人信息卡片动态渐变色 */
+#aside-content > .card-widget.card-info {
+  background: linear-gradient(
+    -45deg,
+    #e8d8b9,
+    #eccec5,
+    #a3e9eb,
+    #bdbdf0,
+    #eec1ea
+  );
+  box-shadow: 0 0 5px rgb(66, 68, 68);
+  position: relative;
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite !important;
+}
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 黑夜模式适配 */
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+  background: #191919ee;
+}
+
+/* 个人信息Follow me按钮 */
+#aside-content > .card-widget.card-info > #card-info-btn {
+  background-color: #3eb8be;
+  border-radius: 8px;
+}
+
+/* 本地搜索 */
+#local-search .search-dialog .local-search__hit-item {
+  padding-bottom: 10px;
+  border-bottom: rgb(10, 188, 188, 0.33) solid;
+  margin-top: 10px;
+}
+#local-search .search-dialog .local-search__hit-item .search-result-tags .tag-list {
+  display: inline;
+  margin: 5px;
+}
+
+/* 遮罩透明度调整 */
+[data-theme='dark'] #web_bg:before, [data-theme='dark'] #footer:before, [data-theme='dark'] #page-header:before {
+  background-color: rgb(0, 0, 0, 0.3);
+}

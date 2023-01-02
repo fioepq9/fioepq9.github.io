@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>操作系统面试题 | LJF的秘密基地</title><meta name="author" content="fioepq9"><meta name="copyright" content="fioepq9"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="收集的一些操作系统方面的面试题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统面试题">
+<meta property="og:url" content="https://fioepq9.cn/2022/11/22/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="LJF的秘密基地">
+<meta property="og:description" content="收集的一些操作系统方面的面试题。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fioepq9.cn/img/pixiv_62608184.jpg">
+<meta property="article:published_time" content="2022-11-21T16:54:15.000Z">
+<meta property="article:modified_time" content="2022-12-29T15:16:49.823Z">
+<meta property="article:author" content="fioepq9">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="操作系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fioepq9.cn/img/pixiv_62608184.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://fioepq9.cn/2022/11/22/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E9%A2%98/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":290},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '操作系统面试题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-29 23:16:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="LJF的秘密基地" type="application/atom+xml">
+</head><body><link rel="stylesheet" href="/css/loading-bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LJF的秘密基地</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">操作系统面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-21T16:54:15.000Z" title="发表于 2022-11-22 00:54:15">2022-11-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-29T15:16:49.823Z" title="更新于 2022-12-29 23:16:49">2022-12-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="操作系统面试题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><h3 id="进程、线程、协程之间的区别？"><a href="#进程、线程、协程之间的区别？" class="headerlink" title="进程、线程、协程之间的区别？"></a>进程、线程、协程之间的区别？</h3><ol>
+<li><p>进程是一个运行中的程序实例，是 CPU 资源调度的基本单位；线程是运行在进程上下文的逻辑控制流，是程序执行的基本单位；协程是用户态的轻量级线程，是线程内部调度的基本单位。线程依赖于进程，一个进程里至少存在一个线程；协程依赖于线程，一个线程里至少存在一个协程。</p>
+</li>
+<li><p>进程持有的资源有：进程 ID、页表（提供了一个独立于其它进程的地址空间）、文件描述符表、代码段、数据段、环境变量、寄存器中的内容（通用寄存器、flag 寄存器、程序计数器）、内核栈、用户栈；</p>
+<p>线程持有的资源有：线程 ID、寄存器中的内容（通用寄存器、flag 寄存器、程序计数器）、内核栈、用户栈；</p>
+<p>协程持有的资源有：寄存器中的内容（通用寄存器、flag 寄存器、程序计数器）、用户栈。</p>
+</li>
+<li><p>切换开销上：进程 &gt; 线程 &gt; 协程。切换，实质上就是将当前上下文保存，然后取出新的上下文，显然持有的资源越多，切换的开销也就越大；同时，进程切换的时候还会刷新快表，导致快表缓存失效，也就导致新进程刚启动的时候运行速率较慢。进程、线程切换时都要陷入内核态，而协程不需要。进程、线程的切换由操作系统调度，而协程由用户自己调度。</p>
+</li>
+<li><p>通信方面上：进程间的通信主要依靠 IPC；而线程、协程间的通信，因为同一进程下的线程、协程共享内存，通信可以直接通过内存进行。</p>
+</li>
+</ol>
+<h4 id="同一进程中的线程可以共享哪些数据？"><a href="#同一进程中的线程可以共享哪些数据？" class="headerlink" title="同一进程中的线程可以共享哪些数据？"></a>同一进程中的线程可以共享哪些数据？</h4><p>进程 ID、页表、文件描述符表、代码段、数据段、环境变量。</p>
+<h4 id="线程独占哪些资源？"><a href="#线程独占哪些资源？" class="headerlink" title="线程独占哪些资源？"></a>线程独占哪些资源？</h4><p>线程 ID、寄存器中的内容、内核栈、用户栈。</p>
+<h3 id="进程是如何进行切换的？"><a href="#进程是如何进行切换的？" class="headerlink" title="进程是如何进行切换的？"></a>进程是如何进行切换的？</h3><p>进程的切换是由操作系统进行的。操作系统首先会触发一个系统调用，进入到内核态；在内核态中，将当前进程的上下文保存，然后通过进程调度算法从阻塞态的进程队列中取出一个进程，恢复新进程的上下文，然后退出内核态，将控制权移交给新进程。</p>
+<h4 id="进程的状态有哪些？"><a href="#进程的状态有哪些？" class="headerlink" title="进程的状态有哪些？"></a>进程的状态有哪些？</h4><h5 id="五态模型"><a href="#五态模型" class="headerlink" title="五态模型"></a>五态模型</h5><ul>
+<li>新建态：进程刚刚被创建，等待系统完成创建进程的所有必要信息。</li>
+<li>就绪态：一个进程得到了除控制权以外的所需资源，一旦得到控制权就可以执行。</li>
+<li>运行态：一个进程在运行的过程中。</li>
+<li>阻塞态：一个进程正在等待某一事件的发生，或者说等待一个信号而暂时停止运行。</li>
+<li>终止态：进程已结束运行，回收除进程控制块（PCB）之后的其他资源，并等待其他进程从 PCB 中收集相关信息。</li>
+</ul>
+<h4 id="进程调度策略有哪些？"><a href="#进程调度策略有哪些？" class="headerlink" title="进程调度策略有哪些？"></a>进程调度策略有哪些？</h4><h5 id="批处理系统"><a href="#批处理系统" class="headerlink" title="批处理系统"></a>批处理系统</h5><ol>
+<li>先来先服务(FCFS)</li>
+</ol>
+<p>按照请求的顺序进行调度。这是一种非抢占式的算法，开销小，没有饥饿问题。可能会导致短作业的响应时间过长。</p>
+<ol start="2">
+<li>最短作业优先(SJF)</li>
+</ol>
+<p>按估计运行时间最短的顺序进行调度。也是一种非抢占式的算法，吞吐量高。但如果一直有短作业到来，会导致长作业的饥饿。</p>
+<ol start="3">
+<li>最短剩余时间优先(SRTN)</li>
+</ol>
+<p>按估计剩余运行时间的顺序进行调度，是最短作业优先的抢占式版本，吞吐量高。跟最短作业优先有一样的问题，可能导致长作业饥饿。</p>
+<h5 id="交互式系统"><a href="#交互式系统" class="headerlink" title="交互式系统"></a>交互式系统</h5><ol>
+<li>时间片轮转(Round Robin)</li>
+</ol>
+<p>将所有就绪进程按 FCFS 的原则排成队列，用完时间片的进程回到队列尾部。这种算法很好地兼顾了响应时间和处理时间，但时间片的大小选择比较困难。如果时间片过小，进程切换频繁，开销太大；如果时间片太长，实时性就得不到保证。</p>
+<ol start="2">
+<li>优先级调度算法</li>
+</ol>
+<p>为所有进程分配一个优先级，按优先级进行调度。为了防止低优先级的进程得不到调度，可以随时间增加等待进程的优先级。</p>
+<ol start="3">
+<li>多级反馈队列调度算法(Multilevel Feedback Queue)</li>
+</ol>
+<p>维护多个就绪进程队列，优先级递减，时间片递增。只有优先级更高的队列为空时才会调度低优先级队列中的队列。所有进程一开始都位于最高优先级队列，每次执行完一个时间片，就移动到下个队列。为了避免长作业饥饿问题，可以每隔一段时间，就重新将进程放入最高优先级队列。</p>
+<h4 id="进程间通信的方式（IPC）？"><a href="#进程间通信的方式（IPC）？" class="headerlink" title="进程间通信的方式（IPC）？"></a>进程间通信的方式（IPC）？</h4><ol>
+<li>管道（匿名管道、有名管道）</li>
+<li>消息队列</li>
+<li>共享内存</li>
+<li>信号量</li>
+<li>信号</li>
+<li>套接字</li>
+</ol>
+<h5 id="讲讲你对同步和互斥的理解？"><a href="#讲讲你对同步和互斥的理解？" class="headerlink" title="讲讲你对同步和互斥的理解？"></a>讲讲你对同步和互斥的理解？</h5><ul>
+<li>同步：多个控制流因为合作而使得控制流的执行有一定的先后顺序。</li>
+<li>互斥：同一时间只有一个控制流能够执行。</li>
+</ul>
+<h3 id="什么是死锁？"><a href="#什么是死锁？" class="headerlink" title="什么是死锁？"></a>什么是死锁？</h3><p>多个控制流之间互相持有所需资源，并等待其它控制流释放资源，导致的循环等待的情况。</p>
+<h4 id="死锁产生的必要条件？"><a href="#死锁产生的必要条件？" class="headerlink" title="死锁产生的必要条件？"></a>死锁产生的必要条件？</h4><ul>
+<li>互斥：一个资源一次只能被一个控制流持有。</li>
+<li>占有并等待：一个控制流至少占有一个资源，并在等待另一个被其它控制流占有的资源。</li>
+<li>非抢占：已经分配给一个控制流的资源不能被强制性抢占，只能由控制流完成任务后自行释放。</li>
+<li>循环等待：若干控制流之间形成一种头尾相接的环形等待资源关系，该环路中的每个控制流等在等待上一个控制流所占有的资源。</li>
+</ul>
+<h4 id="死锁的处理方法？"><a href="#死锁的处理方法？" class="headerlink" title="死锁的处理方法？"></a>死锁的处理方法？</h4><h5 id="鸵鸟策略"><a href="#鸵鸟策略" class="headerlink" title="鸵鸟策略"></a>鸵鸟策略</h5><p>直接忽略死锁。因为解决死锁的问题的代价很高，当发生死锁时不会对用户造成多大影响，或者发生死锁的概率很低时，可以采用鸵鸟策略。</p>
+<h5 id="死锁预防"><a href="#死锁预防" class="headerlink" title="死锁预防"></a>死锁预防</h5><p>基本思想是破坏形成死锁的四个必要条件。</p>
+<ul>
+<li>破坏互斥条件：允许某些资源同时被多个控制流持有。这个做法的问题是有些资源本身不具有这种属性，实用性有限。</li>
+<li>破坏占有并等待条件：实现资源预先分配策略，即一个控制执行任务之前，必须一次性申请所需资源，否则不允许。这个做法的问题是很多时候我们无法在执行前得知一个控制流具体需要哪些资源。同时这个也会降低资源的利用率，减少了并发量。</li>
+<li>破坏非抢占条件：允许控制流强行抢占其它控制流占有的资源。抢占会带来很多额外的开销。</li>
+<li>破坏循环等待条件：对资源进行编号，所有控制流对资源的申请必须按序提出，只有占有了低级资源的控制流才能申请高级资源。这样避免了占有高级资源的控制流再去申请低级资源，破坏了循环环路。</li>
+</ul>
+<h5 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h5><p>动态检查资源分配状态，确保系统处于安全状态，只有处于安全状态时才会进行资源的分配。安全状态指的是：存在某种对控制流的资源分配顺序，使得每一个控制流都能运行。</p>
+<h5 id="死锁解除"><a href="#死锁解除" class="headerlink" title="死锁解除"></a>死锁解除</h5><p>当检测到死锁的时候，让某些控制流回滚到足以解除死锁的地步，控制流回滚时释放资源。这要求系统维护控制流的历史信息，并设置回滚点。</p>
+<h3 id="虚拟内存是什么？"><a href="#虚拟内存是什么？" class="headerlink" title="虚拟内存是什么？"></a>虚拟内存是什么？</h3><p>虚拟内存是一种对真实物理内存的抽象，它将物理内存看成是磁盘的缓存，为每个进程提供了独立的地址空间，保护了每个进程的地址空间不被其他进程破坏。</p>
+<p>将一个进程内的虚拟地址转化成对应的物理地址，叫做地址翻译。计算机的地址翻译是软硬件结合的，os 负责为每个进程维护页表，硬件 MMU 通过快表、页表执行地址翻译。MMU 如果从页表中发现该页不在内存中，就会触发缺页异常，根据页面置换算法从已缓存的页中选择一页进行置换（如果牺牲页被修改过，就复制其回磁盘）。</p>
+<h4 id="虚拟内存的优点"><a href="#虚拟内存的优点" class="headerlink" title="虚拟内存的优点"></a>虚拟内存的优点</h4><ul>
+<li>每个进程拥有独立的地址空间，这简化了内存管理，让进程间互不影响（通过在页表中设置许可位，提供访问控制）。</li>
+<li>将物理内存扩充成了更大的逻辑内存。</li>
+<li>通过将相应的虚拟页映射到同一物理页，可以实现共享库代码段。</li>
+</ul>
+<h4 id="页面置换算法有哪些？"><a href="#页面置换算法有哪些？" class="headerlink" title="页面置换算法有哪些？"></a>页面置换算法有哪些？</h4><ol>
+<li>【无法实现】最佳置换法（OPT）</li>
+</ol>
+<p>每次选择淘汰的页面是以后永不使用，或者在最长时间内不再被访问的页面。</p>
+<ol start="2">
+<li>先进先出置换法（FIFO）</li>
+</ol>
+<p>每次选择淘汰的页面是最早进入内存的页面。</p>
+<ol start="3">
+<li>最近最久未使用置换法（LRU）</li>
+</ol>
+<p>每次选择淘汰的页面是最近最久未使用的页面。</p>
+<ol start="4">
+<li>时钟置换法（Clock）</li>
+</ol>
+<p>是 LRU 算法的近似实现。维护位组成的循环队列，每个位代表一个页。当某页被访问时，其访问位置为 1。当需要淘汰一个页面时，只需检查页的访问位。如果是 0，就选择该页换出；如果是 1，则将它置为 0，暂不换出，继续检查下一个页面。</p>
+<h4 id="抖动指的是什么现象？"><a href="#抖动指的是什么现象？" class="headerlink" title="抖动指的是什么现象？"></a>抖动指的是什么现象？</h4><p>指页面不断地换进换出，导致 CPU 利用率低下。通常成因是经常使用的内存大小超出了物理内存大小。</p>
+<h4 id="碎片指的是什么现象？"><a href="#碎片指的是什么现象？" class="headerlink" title="碎片指的是什么现象？"></a>碎片指的是什么现象？</h4><ul>
+<li>内部碎片：在一个已分配块比有效载荷大时发生的。也即分配了但不会被使用的空间。</li>
+<li>外部碎片：当空闲内存合计起来足够满足一个分配请求，但是没有一个单独的空闲块足够大可以来处理这个请求时发生的。</li>
+</ul>
+<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a>硬件结构</h2><h3 id="冯诺依曼模型由哪些部分组成？分别对应计算机的哪些硬件？"><a href="#冯诺依曼模型由哪些部分组成？分别对应计算机的哪些硬件？" class="headerlink" title="冯诺依曼模型由哪些部分组成？分别对应计算机的哪些硬件？"></a>冯诺依曼模型由哪些部分组成？分别对应计算机的哪些硬件？</h3><p>「运算器」、「控制器」、「存储器」、「输入设备」、「输出设备」。</p>
+<ul>
+<li><p>「运算器」对应 CPU 中的逻辑运算单元</p>
+</li>
+<li><p>「控制器」对应 CPU 中的控制单元。</p>
+</li>
+<li><p>「存储器」对应内存、磁盘、CPU 中的寄存器、L1&#x2F;L2&#x2F;L3 Cache 等存储设备。</p>
+</li>
+<li><p>「输入设备」对应键盘、鼠标等。</p>
+</li>
+<li><p>「输出设备」对应显示器等。</p>
+</li>
+</ul>
+<h3 id="32-位和-64-位-CPU-的最主要区别是什么？"><a href="#32-位和-64-位-CPU-的最主要区别是什么？" class="headerlink" title="32 位和 64 位 CPU 的最主要区别是什么？"></a>32 位和 64 位 CPU 的最主要区别是什么？</h3><p>一次能计算多少字节的数据。</p>
+<ul>
+<li>32 位 CPU 一次可以计算 4 个字节。</li>
+<li>64 位 CPU 一次可以计算 8 个字节。</li>
+</ul>
+<h3 id="为什么有了内存还需要寄存器？"><a href="#为什么有了内存还需要寄存器？" class="headerlink" title="为什么有了内存还需要寄存器？"></a>为什么有了内存还需要寄存器？</h3><p>内存离 CPU 的物理距离太远了，而寄存器在 CPU 中，且紧挨着 CPU 的控制单元和逻辑运算单元，运算速度更快。</p>
+<h4 id="常见的寄存器种类有哪些？"><a href="#常见的寄存器种类有哪些？" class="headerlink" title="常见的寄存器种类有哪些？"></a>常见的寄存器种类有哪些？</h4><ul>
+<li>「通用寄存器」，用来存放需要进行运算的数据。</li>
+<li>「程序计数器」，用来存储 CPU 将要执行的下一条指令「所在的内存地址」。</li>
+<li>「指令寄存器」，用来存放当前即将执行的指令，在指令执行完成之前，都存储在这里。</li>
+</ul>
+<h3 id="总线是用来干什么的？"><a href="#总线是用来干什么的？" class="headerlink" title="总线是用来干什么的？"></a>总线是用来干什么的？</h3><p>总线用于 CPU 和内存以及其他设备之间的通信。</p>
+<h4 id="总线分为哪几种？"><a href="#总线分为哪几种？" class="headerlink" title="总线分为哪几种？"></a>总线分为哪几种？</h4><ul>
+<li>「地址总线」，用于指定 CPU 将要操作的内存地址。</li>
+<li>「数据总线」，用于读写内存的数据。</li>
+<li>「控制总线」，用于发送和接收信号，比如中断、设备复位等信号。CPU 收到信号后进行响应时，也需要控制总线。</li>
+</ul>
+<h4 id="CPU-是如何通过总线读写内存数据的？"><a href="#CPU-是如何通过总线读写内存数据的？" class="headerlink" title="CPU 是如何通过总线读写内存数据的？"></a>CPU 是如何通过总线读写内存数据的？</h4><ol>
+<li>首先要通过「地址总线」来指定内存的地址。</li>
+<li>再通过「数据总线」来传输数据。</li>
+</ol>
+<h3 id="CPU-执行程序的过程？（一个指令周期，CPU-做了什么？）"><a href="#CPU-执行程序的过程？（一个指令周期，CPU-做了什么？）" class="headerlink" title="CPU 执行程序的过程？（一个指令周期，CPU 做了什么？）"></a>CPU 执行程序的过程？（一个指令周期，CPU 做了什么？）</h3><ol>
+<li>CPU 读取「程序计数器」的值（即读取下一条指令的内存地址），然后 CPU 的「控制单元」操作「地址总线」指定需要访问的内存地址，接着通知内存设备准备数据，数据准备好后通过「数据总线」将指令传输给 CPU，CPU 收到数据后存入「指令寄存器」。</li>
+<li>CPU 分析「指令寄存器」中的指令，确定指令的类型和参数：如果是计算类型的指令，就将指令交由「逻辑运算单元」运算；如果是存储类型的指令，则交由「控制单元」执行。</li>
+<li>CPU 执行完指令后，「程序计数器」的值自增，执行下一条指令。自增的值的大小，由 CPU 的位宽决定，32 位 CPU 的指令需要 4 个字节存放，因此自增 4；而 64 位 CPU 则自增 8。</li>
+</ol>
+<h3 id="64-位-CPU-相比-32-位-CPU-的优势在哪？64-位-CPU-的计算性能一定比-32-位-CPU-高吗？"><a href="#64-位-CPU-相比-32-位-CPU-的优势在哪？64-位-CPU-的计算性能一定比-32-位-CPU-高吗？" class="headerlink" title="64 位 CPU 相比 32 位 CPU 的优势在哪？64 位 CPU 的计算性能一定比 32 位 CPU 高吗？"></a>64 位 CPU 相比 32 位 CPU 的优势在哪？64 位 CPU 的计算性能一定比 32 位 CPU 高吗？</h3><p>64 位 CPU 相比 32 位 CPU 的优势主要体现在两个方面：</p>
+<ol>
+<li>64 位 CPU 可以一次计算 32 位~64 位的数字，而 32 位 CPU 如果要计算超过 32 位的数字，就需要分多步骤进行计算，效率就没那么高。但是大部分应用程序很少会使用超过 32 位的数字。只有运算大数字的时候，64 位 CPU 的优势才能体现出来，否则和 32 位 CPU 的计算性能相差不大。</li>
+<li>64 位 CPU 可以寻址更大的内存空间。32 位 CPU 最大的寻址地址是 4G&#x3D;$2^{32}$，而 64 位 CPU 的最大寻址地址是 4E&#x3D;$2^{64}$。</li>
+</ol>
+<h3 id="你知道软件的-32-位和-64-位之间的区别吗？32-位的软件可以运行在-64-位机器上吗？反过来呢？"><a href="#你知道软件的-32-位和-64-位之间的区别吗？32-位的软件可以运行在-64-位机器上吗？反过来呢？" class="headerlink" title="你知道软件的 32 位和 64 位之间的区别吗？32 位的软件可以运行在 64 位机器上吗？反过来呢？"></a>你知道软件的 32 位和 64 位之间的区别吗？32 位的软件可以运行在 64 位机器上吗？反过来呢？</h3><p>64 位和 32 位的软件，实际上代表指令是 64 位还是 32 位的。</p>
+<p>如果想要 32 位指令在 64 位机器上执行，只需要一套兼容机制，就可以做到了。</p>
+<p>但如果想要 64 位指令在 32 位机器上执行，就比较困难了，因为 32 位的寄存器存不下 64 位的指令。</p>
+<h3 id="讲讲你对-L1、L2、L3-Cache-的理解？"><a href="#讲讲你对-L1、L2、L3-Cache-的理解？" class="headerlink" title="讲讲你对 L1、L2、L3 Cache 的理解？"></a>讲讲你对 L1、L2、L3 Cache 的理解？</h3><p>L1 Cache 通常分为「数据缓存」和「指令缓存」，两者大小通常一致。</p>
+<p>L1 Cache 和 L2 Cache 都是每个 CPU 核心独有的，而 L3 Cache 是多个 CPU 核心共享的。</p>
+<p>CPU 访问 L1 Cache 需要 2-4 个时钟周期，访问 L2 Cache 需要 10-20 个时钟周期，访问 L3 Cache 需要 20-60 个时钟周期，访问寄存器一般少于一个时钟周期，访问内存需要 200-300 个时钟周期。</p>
+<h4 id="什么时候同步-Cache-和内存？"><a href="#什么时候同步-Cache-和内存？" class="headerlink" title="什么时候同步 Cache 和内存？"></a>什么时候同步 Cache 和内存？</h4><h5 id="写直达（Write-Through）：把数据同时写入内存和-Cache-中。"><a href="#写直达（Write-Through）：把数据同时写入内存和-Cache-中。" class="headerlink" title="写直达（Write Through）：把数据同时写入内存和 Cache 中。"></a>写直达（Write Through）：把数据同时写入内存和 Cache 中。</h5><ul>
+<li><p>如果数据已经在 Cache 中，先更新 Cache，再更新内存。</p>
+</li>
+<li><p>如果数据没有在 Cache 中，直接更新内存。</p>
+</li>
+</ul>
+<p>问题：无论数据在不在 Cache 里面，每次写操作都会操作内存，影响性能。</p>
+<h5 id="写回（Write-Back）：当发生写操作时，仅仅更新缓存，只有当缓存失效时，才更新内存。"><a href="#写回（Write-Back）：当发生写操作时，仅仅更新缓存，只有当缓存失效时，才更新内存。" class="headerlink" title="写回（Write Back）：当发生写操作时，仅仅更新缓存，只有当缓存失效时，才更新内存。"></a>写回（Write Back）：当发生写操作时，仅仅更新缓存，只有当缓存失效时，才更新内存。</h5><ul>
+<li>如果数据在缓存中，则更新缓存并标记。</li>
+<li>如果数据不在缓存中，并且对应缓存区域已被标记，则将缓存区域中的数据写回到内存中，再写入缓存。</li>
+</ul>
+<p>如果我们大量操作都命中缓存，那么大部分时间里 CPU 都不需要读写内存，自然性能比写直达高很多。</p>
+<h4 id="如何保证缓存一致性？"><a href="#如何保证缓存一致性？" class="headerlink" title="如何保证缓存一致性？"></a>如何保证缓存一致性？</h4><ol>
+<li>写传播（Write Propagation）：某个 CPU 核心里的 Cache 数据更新时，必须要传播到其他核心的 Cache。</li>
+<li>事务的串行化（Transaction Serialization）：某个 CPU 核心里对数据的操作顺序，必须在其他核心看起来顺序是一样的。</li>
+</ol>
+<h5 id="总线嗅探"><a href="#总线嗅探" class="headerlink" title="总线嗅探"></a>总线嗅探</h5><p>当 CPU 核进行写操作时，通过总线把这个事件广播给其他所有核心，每个 CPU 核心都会监听总线上的广播事件，并检查是否有相同的数据在自己的 L1&#x2F;L2 Cache 中，如果存在，则此时也更新 L1&#x2F;L2 Cache。</p>
+<p>问题：只保证了更新事件能被其他 CPU 核心知晓，并不能保证事务串行化。</p>
+<h5 id="MESI-协议"><a href="#MESI-协议" class="headerlink" title="MESI 协议"></a>MESI 协议</h5><p>Modified（已修改）、Exclusive（独占）、Shared（共享）、Invalidated（已失效）。</p>
+<p>使用上述的四个状态标记 Cache 中的数据。</p>
+<p>Modifed：表示 Cache 中的数据已经修改，但还没有同步到内存中。</p>
+<p>Exclusive：Cache 和内存是一致的，此时数据可以自由写入，而不用通知其他 CPU 核心。更新数据的同时标记为 Modified。</p>
+<p>Shared：Cache 和内存是一致的，数据写入的时候，要先广播一个信号，要求其他核心中的对应 Cache 标记为 Invalidated，然后再更新当前 Cache 的数据，更新同时标记为 Modified。</p>
+<h4 id="谈谈你对伪共享的理解？"><a href="#谈谈你对伪共享的理解？" class="headerlink" title="谈谈你对伪共享的理解？"></a>谈谈你对伪共享的理解？</h4><p>伪共享指的是多个 CPU 核心同时读写一个 Cache Line 的不同变量时，而导致的 CPU Cache 失效的现象。</p>
+<h5 id="避免伪共享的方法"><a href="#避免伪共享的方法" class="headerlink" title="避免伪共享的方法"></a>避免伪共享的方法</h5><ul>
+<li>在 Linux 内核中存在<code>__cacheline_aligned_in_smp</code>宏定义，采用这个宏定义可以使得变量在 Cache Line 中是对齐的。</li>
+</ul>
+<h3 id="linux-中的-task-调度算法"><a href="#linux-中的-task-调度算法" class="headerlink" title="linux 中的 task 调度算法"></a>linux 中的 task 调度算法</h3><p>在 linux 中，根据任务的优先级以及响应要求，将 task 主要分为两种，其中优先级的数值越小，优先级越高。</p>
+<ul>
+<li>实时任务（优先级：0~99），对系统的响应时间要求很高，即要尽可能快地执行实时任务。</li>
+<li>普通任务（优先级：100~139），响应时间没有很高的要求。</li>
+</ul>
+<p>linux 为了保障高优先级的任务能够尽可能早地被执行，分为 3 种调度类：</p>
+<p><img src="https://raw.githubusercontent.com/ltlin9/note-img/master/img/2022/04/14/20220414-221737.png" alt="调度类"></p>
+<p>Deadline、Realtime 这两个调度类，应用于实时任务，调度策略如下：</p>
+<ul>
+<li>DEADLINE：安装 deadline 进行调度，距离当前时间点最近 deadline 的任务会被优先调度。</li>
+<li>FIFO：对于相同优先级的任务，按照先来先服务原则，但是优先级更高的任务可以抢占低优先级的任务。</li>
+<li>RR：对于相同优先级的任务，轮流运行一个时间片，但是优先级更高的任务可以抢占低优先级的任务。</li>
+</ul>
+<p>Fair 调度类应用于普通任务，有两种调度策略：</p>
+<ul>
+<li>NORMAL：普通任务使用的调度策略。</li>
+<li>BATCH：后台任务的调度策略，不会和终端交互，因此在不影响其他需要交互的任务的前提下，可以适当降低它的优先级。</li>
+<li>CFS（完全公平调度）：为每个任务维护一个虚拟运行时间，优先选择虚拟运行时间少的任务。虚拟运行时间 &#x3D; 时间运行时间 * NICE_0_LOAD &#x2F; 权重。</li>
+</ul>
+<h4 id="CPU-运行队列"><a href="#CPU-运行队列" class="headerlink" title="CPU 运行队列"></a>CPU 运行队列</h4><p>每个 CPU 都有自己的运行队列，Deadline 运行队列 dl_rq，实时任务运行队列 rt_rq，CFS 运行队列 cfs_rq，其中 cfs_rq 的数据结构为红黑树，最左结点即为下次被调度的任务。</p>
+<p>CPU 选择任务时，会按 Deadline &gt; Realtime &gt; Fair 的优先级顺序进行选择，因此实时任务总是会比普通任务优先被执行。</p>
+<h3 id="什么是软中断？"><a href="#什么是软中断？" class="headerlink" title="什么是软中断？"></a>什么是软中断？</h3><p>linux 为了解决中断处理程序执行过长和中断丢失的问题，将中断过程分成了两个阶段，分别是「硬中断」和「软中断」。</p>
+<ul>
+<li>「硬中断」用来快速处理中断，一般会暂时关闭中断请求，主要负责处理跟硬件紧密相关或者时间敏感的事情。「硬中断」会打断 CPU 正在执行的任务，然后立即执行中断处理程序。</li>
+<li>「软中断」用来延迟处理「硬中断」未完成的工作，一般以「内核线程」的形式运行。每一个 CPU 核心都对应一个软中断内核线程，名字通常为<code>ksoftirqd/「CPU编号」</code>。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>操作系统面试题</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://fioepq9.cn/2022/11/22/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E9%A2%98/">https://fioepq9.cn/2022/11/22/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E9%A2%98/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>fioepq9</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-11-22</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2022-12-29</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a><a class="post-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></div><div class="post_share"><div class="social-share" data-image="/img/pixiv_62608184.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/11/22/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"><img class="prev-cover" src="/img/pixiv_60155475.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">二分查找</div></div></a></div><div class="next-post pull-right"><a href="/2022/11/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/"><img class="next-cover" src="/img/pixiv_36633503.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数据结构与算法面试题</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/11/22/golang-%E9%9D%A2%E8%AF%95%E9%A2%98/" title="golang 面试题"><img class="cover" src="/img/pixiv_74279906.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-22</div><div class="title">golang 面试题</div></div></a></div><div><a href="/2022/11/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/" title="数据结构与算法面试题"><img class="cover" src="/img/pixiv_36633503.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-22</div><div class="title">数据结构与算法面试题</div></div></a></div><div><a href="/2022/11/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/" title="计算机网络面试题"><img class="cover" src="/img/pixiv_37855635.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-21</div><div class="title">计算机网络面试题</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">fioepq9</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/fioepq9" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:fioepq9@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81"><span class="toc-text">控制流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">进程、线程、协程之间的区别？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E4%B8%80%E8%BF%9B%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%8F%AF%E4%BB%A5%E5%85%B1%E4%BA%AB%E5%93%AA%E4%BA%9B%E6%95%B0%E6%8D%AE%EF%BC%9F"><span class="toc-text">同一进程中的线程可以共享哪些数据？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8B%AC%E5%8D%A0%E5%93%AA%E4%BA%9B%E8%B5%84%E6%BA%90%EF%BC%9F"><span class="toc-text">线程独占哪些资源？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%88%87%E6%8D%A2%E7%9A%84%EF%BC%9F"><span class="toc-text">进程是如何进行切换的？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">进程的状态有哪些？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%94%E6%80%81%E6%A8%A1%E5%9E%8B"><span class="toc-text">五态模型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">进程调度策略有哪些？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-text">批处理系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E5%BC%8F%E7%B3%BB%E7%BB%9F"><span class="toc-text">交互式系统</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%88IPC%EF%BC%89%EF%BC%9F"><span class="toc-text">进程间通信的方式（IPC）？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%B2%E8%AE%B2%E4%BD%A0%E5%AF%B9%E5%90%8C%E6%AD%A5%E5%92%8C%E4%BA%92%E6%96%A5%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">讲讲你对同步和互斥的理解？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%BB%E9%94%81%EF%BC%9F"><span class="toc-text">什么是死锁？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%EF%BC%9F"><span class="toc-text">死锁产生的必要条件？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">死锁的处理方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%B8%B5%E9%B8%9F%E7%AD%96%E7%95%A5"><span class="toc-text">鸵鸟策略</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E9%A2%84%E9%98%B2"><span class="toc-text">死锁预防</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E9%81%BF%E5%85%8D"><span class="toc-text">死锁避免</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E8%A7%A3%E9%99%A4"><span class="toc-text">死锁解除</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">虚拟内存是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">虚拟内存的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">页面置换算法有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%96%E5%8A%A8%E6%8C%87%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E7%8E%B0%E8%B1%A1%EF%BC%9F"><span class="toc-text">抖动指的是什么现象？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A2%8E%E7%89%87%E6%8C%87%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E7%8E%B0%E8%B1%A1%EF%BC%9F"><span class="toc-text">碎片指的是什么现象？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">硬件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E6%A8%A1%E5%9E%8B%E7%94%B1%E5%93%AA%E4%BA%9B%E9%83%A8%E5%88%86%E7%BB%84%E6%88%90%EF%BC%9F%E5%88%86%E5%88%AB%E5%AF%B9%E5%BA%94%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%93%AA%E4%BA%9B%E7%A1%AC%E4%BB%B6%EF%BC%9F"><span class="toc-text">冯诺依曼模型由哪些部分组成？分别对应计算机的哪些硬件？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32-%E4%BD%8D%E5%92%8C-64-%E4%BD%8D-CPU-%E7%9A%84%E6%9C%80%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">32 位和 64 位 CPU 的最主要区别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%86%E5%86%85%E5%AD%98%E8%BF%98%E9%9C%80%E8%A6%81%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%9F"><span class="toc-text">为什么有了内存还需要寄存器？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AF%84%E5%AD%98%E5%99%A8%E7%A7%8D%E7%B1%BB%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">常见的寄存器种类有哪些？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E6%98%AF%E7%94%A8%E6%9D%A5%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%9F"><span class="toc-text">总线是用来干什么的？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E5%88%86%E4%B8%BA%E5%93%AA%E5%87%A0%E7%A7%8D%EF%BC%9F"><span class="toc-text">总线分为哪几种？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E6%98%AF%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%80%BB%E7%BA%BF%E8%AF%BB%E5%86%99%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E7%9A%84%EF%BC%9F"><span class="toc-text">CPU 是如何通过总线读写内存数据的？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-%E6%89%A7%E8%A1%8C%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%BF%87%E7%A8%8B%EF%BC%9F%EF%BC%88%E4%B8%80%E4%B8%AA%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F%EF%BC%8CCPU-%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F%EF%BC%89"><span class="toc-text">CPU 执行程序的过程？（一个指令周期，CPU 做了什么？）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64-%E4%BD%8D-CPU-%E7%9B%B8%E6%AF%94-32-%E4%BD%8D-CPU-%E7%9A%84%E4%BC%98%E5%8A%BF%E5%9C%A8%E5%93%AA%EF%BC%9F64-%E4%BD%8D-CPU-%E7%9A%84%E8%AE%A1%E7%AE%97%E6%80%A7%E8%83%BD%E4%B8%80%E5%AE%9A%E6%AF%94-32-%E4%BD%8D-CPU-%E9%AB%98%E5%90%97%EF%BC%9F"><span class="toc-text">64 位 CPU 相比 32 位 CPU 的优势在哪？64 位 CPU 的计算性能一定比 32 位 CPU 高吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E7%9F%A5%E9%81%93%E8%BD%AF%E4%BB%B6%E7%9A%84-32-%E4%BD%8D%E5%92%8C-64-%E4%BD%8D%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%E5%90%97%EF%BC%9F32-%E4%BD%8D%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8C%E5%9C%A8-64-%E4%BD%8D%E6%9C%BA%E5%99%A8%E4%B8%8A%E5%90%97%EF%BC%9F%E5%8F%8D%E8%BF%87%E6%9D%A5%E5%91%A2%EF%BC%9F"><span class="toc-text">你知道软件的 32 位和 64 位之间的区别吗？32 位的软件可以运行在 64 位机器上吗？反过来呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B2%E8%AE%B2%E4%BD%A0%E5%AF%B9-L1%E3%80%81L2%E3%80%81L3-Cache-%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">讲讲你对 L1、L2、L3 Cache 的理解？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%90%8C%E6%AD%A5-Cache-%E5%92%8C%E5%86%85%E5%AD%98%EF%BC%9F"><span class="toc-text">什么时候同步 Cache 和内存？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%86%99%E7%9B%B4%E8%BE%BE%EF%BC%88Write-Through%EF%BC%89%EF%BC%9A%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%90%8C%E6%97%B6%E5%86%99%E5%85%A5%E5%86%85%E5%AD%98%E5%92%8C-Cache-%E4%B8%AD%E3%80%82"><span class="toc-text">写直达（Write Through）：把数据同时写入内存和 Cache 中。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%86%99%E5%9B%9E%EF%BC%88Write-Back%EF%BC%89%EF%BC%9A%E5%BD%93%E5%8F%91%E7%94%9F%E5%86%99%E6%93%8D%E4%BD%9C%E6%97%B6%EF%BC%8C%E4%BB%85%E4%BB%85%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%EF%BC%8C%E5%8F%AA%E6%9C%89%E5%BD%93%E7%BC%93%E5%AD%98%E5%A4%B1%E6%95%88%E6%97%B6%EF%BC%8C%E6%89%8D%E6%9B%B4%E6%96%B0%E5%86%85%E5%AD%98%E3%80%82"><span class="toc-text">写回（Write Back）：当发生写操作时，仅仅更新缓存，只有当缓存失效时，才更新内存。</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%9F"><span class="toc-text">如何保证缓存一致性？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E5%97%85%E6%8E%A2"><span class="toc-text">总线嗅探</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#MESI-%E5%8D%8F%E8%AE%AE"><span class="toc-text">MESI 协议</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E4%BC%AA%E5%85%B1%E4%BA%AB%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">谈谈你对伪共享的理解？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E4%BC%AA%E5%85%B1%E4%BA%AB%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">避免伪共享的方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E4%B8%AD%E7%9A%84-task-%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-text">linux 中的 task 调度算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-%E8%BF%90%E8%A1%8C%E9%98%9F%E5%88%97"><span class="toc-text">CPU 运行队列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%B8%AD%E6%96%AD%EF%BC%9F"><span class="toc-text">什么是软中断？</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/04/%E3%80%8AGO-%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" title="《GO 专家编程》阅读笔记"><img src="/img/pixiv_37855635.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《GO 专家编程》阅读笔记"/></a><div class="content"><a class="title" href="/2022/12/04/%E3%80%8AGO-%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" title="《GO 专家编程》阅读笔记">《GO 专家编程》阅读笔记</a><time datetime="2022-12-04T11:41:57.000Z" title="发表于 2022-12-04 19:41:57">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/23/leetcode-19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-N-%E4%B8%AA%E7%BB%93%E7%82%B9/" title="leetcode-19 删除链表的倒数第 N 个结点"><img src="/img/pixiv_34844544.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="leetcode-19 删除链表的倒数第 N 个结点"/></a><div class="content"><a class="title" href="/2022/11/23/leetcode-19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-N-%E4%B8%AA%E7%BB%93%E7%82%B9/" title="leetcode-19 删除链表的倒数第 N 个结点">leetcode-19 删除链表的倒数第 N 个结点</a><time datetime="2022-11-23T13:44:54.000Z" title="发表于 2022-11-23 21:44:54">2022-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/23/leetcode-2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" title="leetcode-2 两数相加"><img src="/img/pixiv_35782590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="leetcode-2 两数相加"/></a><div class="content"><a class="title" href="/2022/11/23/leetcode-2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" title="leetcode-2 两数相加">leetcode-2 两数相加</a><time datetime="2022-11-23T09:58:30.000Z" title="发表于 2022-11-23 17:58:30">2022-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/22/k8s-%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/" title="k8s 重要概念"><img src="/img/pixiv_48466332.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="k8s 重要概念"/></a><div class="content"><a class="title" href="/2022/11/22/k8s-%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/" title="k8s 重要概念">k8s 重要概念</a><time datetime="2022-11-21T17:23:57.000Z" title="发表于 2022-11-22 01:23:57">2022-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/22/bore-Rust-%E7%BC%96%E5%86%99%E7%9A%84%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91%E5%B7%A5%E5%85%B7/" title="bore - Rust 编写的流量转发工具"><img src="/img/pixiv_68296699.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="bore - Rust 编写的流量转发工具"/></a><div class="content"><a class="title" href="/2022/11/22/bore-Rust-%E7%BC%96%E5%86%99%E7%9A%84%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91%E5%B7%A5%E5%85%B7/" title="bore - Rust 编写的流量转发工具">bore - Rust 编写的流量转发工具</a><time datetime="2022-11-21T17:20:38.000Z" title="发表于 2022-11-22 01:20:38">2022-11-22</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By fioepq9</div><div class="footer_custom_text">Keep It Simple & Stupid<br/><br/><a target="_blank" rel="noopener" href='https://beian.miit.gov.cn/'><img class="icp-icon" src="/img/icp.png" alt="icp"><span>粤ICP备2022045198号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/local-search.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'f94d8f056d15dd2932e9',
+      clientSecret: '482770d1dd61cbe34a61d2985d06c567ad1fc6a7',
+      repo: 'fioepq9.github.io',
+      owner: 'fioepq9',
+      admin: ['fioepq9'],
+      id: '13b371daac1f8c356600fc67fce796f1',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer src="/js/light.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '113.34532,23.15624';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
